@@ -1,0 +1,56 @@
+LSAR(1)				 User Commands			       LSAR(1)
+
+NAME
+       lsar - list archive file	contents
+
+SYNOPSIS
+       lsar [OPTION]...	ARCHIVE...
+
+DESCRIPTION
+       List the	contents of ARCHIVEs.
+
+OPTIONS
+       -l, -long
+	      Print more information about each	file in	the archive.
+
+       -t, -test
+	      Test the integrity of the	files in the archive, if possible.
+
+       -p, -password PASSWORD
+	      The password to use for decrypting protected archives.
+
+       -e, -encoding ENCODING
+	      The encoding to use for filenames	in the archive,	when it	is not
+	      known.  If not specified,	the program  attempts  to  auto-detect
+	      the encoding used.  Use "help" or	"list" as the argument to give
+	      a	listing	of all supported encodings.
+
+       -E, -password-encoding ENCODING
+	      The encoding to use for the password for the archive, when it is
+	      not  known.  If not specified, then either the encoding given by
+	      the -encoding option or the auto-detected	encoding is used.
+
+       -pe, -print-encoding
+	      Print the	auto-detected encoding and the confidence factor after
+	      the file list.
+
+       -i, -indexes
+	      Instead of specifying the	files to list as filenames or wildcard
+	      patterns,	specify	them as	indexes.
+
+       -j, -json
+	      Print the	listing	in JSON	format.
+
+       -ja, -json-ascii
+	      Print the	listing	in JSON	format,	encoded	as pure	ASCII text.
+
+       -nr, -no-recursion
+	      Do not attempt to	list the contents  of  archives	 contained  in
+	      other archives.  For instance, when listing a .tar.gz file, only
+	      list the .tar file and not its contents.
+
+       -h, -help
+	      Display help information.
+
+SEE ALSO
+       unar(1)
