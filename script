@@ -1,0 +1,25 @@
+#!/bin/sh
+# macOS Extractor by chris1111 
+TempDir="/Private/tmp/Extract"
+appname="macOS Extractor"
+echo " "
+echo " "
+echo $appname
+echo " 
+...................................................................."
+echo " "
+for files in "$@" ;do
+mkdir -p "${TempDir}"
+./unar -r "$@" -o "${TempDir}"
+echo " 
+Extraction complete! "
+echo " 
+...................................................................."
+Sleep 2
+Open "${TempDir}" 
+echo "
+Done 
+...."
+
+done
+
